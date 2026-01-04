@@ -1,0 +1,116 @@
+{
+    "name": "Alert Enrichment with Infrastructure Data",
+    "description": "Enriches Prometheus alerts with infrastructure context and sends to external system",
+    "nodes": [
+          {
+                  "parameters": {
+                            "path": "/webhook/alerts",
+                            "options": {}
+                  },
+                  "name": "Webhook",
+                  "type": "n8n-nodes-base.webhook",
+                  "typeVersion": 1,
+                  "position": [250, 300]
+          },
+          {
+                  "parameters": {
+                            "method": "POST",
+                            "url": "http://prometheus:9090/api/v1/query",
+                            "authentication": "none",
+                            "sendBody": true,
+                            "bodyParameters": {
+                                        "parameters": [
+                                                      {
+                                                                      "name": "query",
+                                                                      "value": "up{job=~\"{{ $json.labels.job | default('.*') }}\"}"
+                                                      }
+                                        ]
+                            }
+                  },
+                  "name": "Query Infrastructure Status",
+                  "type": "n8n-nodes-base.httpRequest",
+                  "typeVersion": 4,
+                  "position": [500, 300]
+          },
+          {
+                  "parameters": {
+                            "conditions": {
+                                        "number": [
+                                                      {
+                                                                      "value1": "{{ $json.data.result.length }}",
+                                                                      "operation": "greaterThan",
+                                                                      "value2": 0
+                                                      }
+                                        ]
+                            }
+                  },
+                  "name": "Check Data Availability",
+                  "type": "n8n-nodes-base.if",
+                  "typeVersion": 1,
+                  "position": [750, 300]
+          },
+          {
+                  "parameters": {
+                            "url": "{{ $env.WEBHOOK_URL | default('https://example.com/webhook') }}",
+                            "method": "POST",
+                            "sendBody": true,
+                            "bodyParameters": {
+                                        "parameters": [
+                                                      {
+                                                                      "name": "alert",
+                                                                      "value": "{{ $json.alerts[0] }}"
+                                                      },
+                                                      {
+                                                                      "name": "infrastructure_status",
+                                                                      "value": "{{ $json.data.result }}"
+                                                      },
+                                                      {
+                                                                      "name": "timestamp",
+                                                                      "value": "{{ $now.toIso() }}"
+                                                      }
+                                        ]
+                            }
+                  },
+                  "name": "Send Enriched Alert",
+                  "type": "n8n-nodes-base.httpRequest",
+                  "typeVersion": 4,
+                  "position": [1000, 300]
+          }
+    ],
+    "connections": {
+          "Webhook": {
+                  "main": [
+                            [
+                                        {
+                                                      "node": "Query Infrastructure Status",
+                                                      "type": "main",
+                                                      "index": 0
+                                        }
+                            ]
+                  ]
+          },
+          "Query Infrastructure Status": {
+                  "main": [
+                            [
+                                        {
+                                                      "node": "Check Data Availability",
+                                                      "type": "main",
+                                                      "index": 0
+                                        }
+                            ]
+                  ]
+          },
+          "Check Data Availability": {
+                  "main": [
+                            [
+                                        {
+                                                      "node": "Send Enriched Alert",
+                                                      "type": "main",
+                                                      "index": 0
+                                        }
+                            ],
+                            []
+                  ]
+          }
+    }
+}
