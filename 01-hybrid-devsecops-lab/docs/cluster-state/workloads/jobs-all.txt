@@ -1,0 +1,4 @@
+NAMESPACE     NAME                       STATUS     COMPLETIONS   DURATION   AGE
+kube-system   helm-install-traefik       Complete   1/1           32s        309d
+kube-system   helm-install-traefik-crd   Complete   1/1           29s        309d
+pauhome       load-netflix-advanced      Failed     0/1           144d       144d

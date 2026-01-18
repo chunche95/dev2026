@@ -1,0 +1,14 @@
+NAMESPACE    NAME                                                 AGE
+monitoring   monitorgrafana                                       144d
+monitoring   monitorgrafana-kube-promet-alertmanager              144d
+monitoring   monitorgrafana-kube-promet-apiserver                 144d
+monitoring   monitorgrafana-kube-promet-coredns                   144d
+monitoring   monitorgrafana-kube-promet-kube-controller-manager   144d
+monitoring   monitorgrafana-kube-promet-kube-etcd                 144d
+monitoring   monitorgrafana-kube-promet-kube-proxy                144d
+monitoring   monitorgrafana-kube-promet-kube-scheduler            144d
+monitoring   monitorgrafana-kube-promet-kubelet                   144d
+monitoring   monitorgrafana-kube-promet-operator                  144d
+monitoring   monitorgrafana-kube-promet-prometheus                144d
+monitoring   monitorgrafana-kube-state-metrics                    144d
+monitoring   monitorgrafana-prometheus-node-exporter              144d

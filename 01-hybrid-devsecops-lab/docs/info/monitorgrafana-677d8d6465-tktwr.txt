@@ -1,0 +1,173 @@
+kubectl describe pod -n monitoring monitorgrafana-677d8d6465-tktwr
+Name:             monitorgrafana-677d8d6465-tktwr
+Namespace:        monitoring
+Priority:         0
+Service Account:  monitorgrafana
+Node:             debianmaster/192.168.0.18
+Start Time:       Fri, 05 Sep 2025 17:38:21 +0200
+Labels:           app.kubernetes.io/instance=monitorgrafana
+                  app.kubernetes.io/name=grafana
+                  app.kubernetes.io/version=12.1.0
+                  helm.sh/chart=grafana-9.3.6
+                  pod-template-hash=677d8d6465
+Annotations:      checksum/config: 0e9cbd0ea8e24e32f7dfca5bab17a2ba05652642f0a09a4882833ae88e4cc4a3
+                  checksum/sc-dashboard-provider-config: e70bf6a851099d385178a76de9757bb0bef8299da6d8443602590e44f05fdf24
+                  checksum/secret: 032056e9c62bbe9d1daa41ee49cd3d9524c076f51ca4c65adadf4ef08ef28712
+                  kubectl.kubernetes.io/default-container: grafana
+Status:           Running
+IP:               10.42.2.155
+IPs:
+  IP:           10.42.2.155
+Controlled By:  ReplicaSet/monitorgrafana-677d8d6465
+Containers:
+  grafana-sc-dashboard:
+    Container ID:    containerd://06c5372a3cee59b7265eeb9075625d995e9b2480ac5b7569dc3a515d16fa5d31
+    Image:           quay.io/kiwigrid/k8s-sidecar:1.30.3
+    Image ID:        quay.io/kiwigrid/k8s-sidecar@sha256:49dcce269568b1645b0050f296da787c99119647965229919a136614123f0627
+    Port:            <none>
+    Host Port:       <none>
+    SeccompProfile:  RuntimeDefault
+    State:           Running
+      Started:       Sun, 18 Jan 2026 21:11:33 +0100
+    Last State:      Terminated
+      Reason:        Unknown
+      Exit Code:     255
+      Started:       Tue, 04 Nov 2025 20:21:46 +0100
+      Finished:      Sun, 18 Jan 2026 21:11:21 +0100
+    Ready:           True
+    Restart Count:   6
+    Environment:
+      METHOD:        WATCH
+      LABEL:         grafana_dashboard
+      LABEL_VALUE:   1
+      FOLDER:        /tmp/dashboards
+      RESOURCE:      both
+      NAMESPACE:     ALL
+      REQ_USERNAME:  <set to the key 'admin-user' in secret 'monitorgrafana'>      Optional: false
+      REQ_PASSWORD:  <set to the key 'admin-password' in secret 'monitorgrafana'>  Optional: false
+      REQ_URL:       http://localhost:3000/api/admin/provisioning/dashboards/reload
+      REQ_METHOD:    POST
+    Mounts:
+      /tmp/dashboards from sc-dashboard-volume (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-c4xm6 (ro)
+  grafana-sc-datasources:
+    Container ID:    containerd://1217fa865ff0f94c9b9314092bd36cb123b08002fe7ac663fea944844d0a4f06
+    Image:           quay.io/kiwigrid/k8s-sidecar:1.30.3
+    Image ID:        quay.io/kiwigrid/k8s-sidecar@sha256:49dcce269568b1645b0050f296da787c99119647965229919a136614123f0627
+    Port:            <none>
+    Host Port:       <none>
+    SeccompProfile:  RuntimeDefault
+    State:           Running
+      Started:       Sun, 18 Jan 2026 21:11:36 +0100
+    Last State:      Terminated
+      Reason:        Unknown
+      Exit Code:     255
+      Started:       Tue, 04 Nov 2025 20:21:47 +0100
+      Finished:      Sun, 18 Jan 2026 21:11:21 +0100
+    Ready:           True
+    Restart Count:   5
+    Environment:
+      METHOD:        WATCH
+      LABEL:         grafana_datasource
+      LABEL_VALUE:   1
+      FOLDER:        /etc/grafana/provisioning/datasources
+      RESOURCE:      both
+      REQ_USERNAME:  <set to the key 'admin-user' in secret 'monitorgrafana'>      Optional: false
+      REQ_PASSWORD:  <set to the key 'admin-password' in secret 'monitorgrafana'>  Optional: false
+      REQ_URL:       http://localhost:3000/api/admin/provisioning/datasources/reload
+      REQ_METHOD:    POST
+    Mounts:
+      /etc/grafana/provisioning/datasources from sc-datasources-volume (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-c4xm6 (ro)
+  grafana:
+    Container ID:    containerd://06822c1937f7b2588702f4580c3c1f92548d45a8a5669e1d32da50da748cb8b2
+    Image:           docker.io/grafana/grafana:12.1.0
+    Image ID:        docker.io/grafana/grafana@sha256:6ac590e7cabc2fbe8d7b8fc1ce9c9f0582177b334e0df9c927ebd9670469440f
+    Ports:           3000/TCP, 9094/TCP, 9094/UDP, 6060/TCP
+    Host Ports:      0/TCP, 0/TCP, 0/UDP, 0/TCP
+    SeccompProfile:  RuntimeDefault
+    State:           Waiting
+      Reason:        CrashLoopBackOff
+    Last State:      Terminated
+      Reason:        Error
+      Exit Code:     1
+      Started:       Sun, 18 Jan 2026 21:54:26 +0100
+      Finished:      Sun, 18 Jan 2026 21:54:26 +0100
+    Ready:           False
+    Restart Count:   226
+    Liveness:        http-get http://:3000/api/health delay=60s timeout=30s period=10s #success=1 #failure=10
+    Readiness:       http-get http://:3000/api/health delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      POD_IP:                       (v1:status.podIP)
+      GF_SECURITY_ADMIN_USER:      <set to the key 'admin-user' in secret 'monitorgrafana'>      Optional: false
+      GF_SECURITY_ADMIN_PASSWORD:  <set to the key 'admin-password' in secret 'monitorgrafana'>  Optional: false
+      GF_PATHS_DATA:               /var/lib/grafana/
+      GF_PATHS_LOGS:               /var/log/grafana
+      GF_PATHS_PLUGINS:            /var/lib/grafana/plugins
+      GF_PATHS_PROVISIONING:       /etc/grafana/provisioning
+    Mounts:
+      /etc/grafana/grafana.ini from config (rw,path="grafana.ini")
+      /etc/grafana/provisioning/dashboards/sc-dashboardproviders.yaml from sc-dashboard-provider (rw,path="provider.yaml")
+      /etc/grafana/provisioning/datasources from sc-datasources-volume (rw)
+      /tmp/dashboards from sc-dashboard-volume (rw)
+      /var/lib/grafana from storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-c4xm6 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       False
+  ContainersReady             False
+  PodScheduled                True
+Volumes:
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      monitorgrafana
+    Optional:  false
+  storage:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  sc-dashboard-volume:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  sc-dashboard-provider:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      monitorgrafana-config-dashboards
+    Optional:  false
+  sc-datasources-volume:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  kube-api-access-c4xm6:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                   From     Message
+  ----     ------          ----                  ----     -------
+  Warning  Unhealthy       74d (x10 over 74d)    kubelet  Liveness probe failed: Get "http://10.42.2.118:3000/api/health": dial tcp 10.42.2.118:3000: connect: connection refused
+  Warning  Unhealthy       74d (x4 over 74d)     kubelet  Readiness probe failed: Get "http://10.42.2.118:3000/api/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Warning  Unhealthy       74d (x366 over 75d)   kubelet  Readiness probe failed: Get "http://10.42.2.118:3000/api/health": dial tcp 10.42.2.118:3000: connect: connection refused
+  Warning  BackOff         74d (x4759 over 75d)  kubelet  Back-off restarting failed container grafana in pod monitorgrafana-677d8d6465-tktwr_monitoring(70ce476e-785e-4363-a2e4-69a553b0c7b7)
+  Warning  FailedMount     46m (x3 over 46m)     kubelet  MountVolume.SetUp failed for volume "config" : object "monitoring"/"monitorgrafana" not registered
+  Warning  FailedMount     46m (x3 over 46m)     kubelet  MountVolume.SetUp failed for volume "sc-dashboard-provider" : object "monitoring"/"monitorgrafana-config-dashboards" not registered
+  Normal   SandboxChanged  46m                   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulled          46m                   kubelet  Container image "quay.io/kiwigrid/k8s-sidecar:1.30.3" already present on machine
+  Normal   Created         46m                   kubelet  Created container: grafana-sc-dashboard
+  Normal   Started         46m                   kubelet  Started container grafana-sc-dashboard
+  Normal   Pulled          46m                   kubelet  Container image "quay.io/kiwigrid/k8s-sidecar:1.30.3" already present on machine
+  Normal   Created         46m                   kubelet  Created container: grafana-sc-datasources
+  Normal   Started         46m                   kubelet  Started container grafana-sc-datasources
+  Normal   Started         46m                   kubelet  Started container grafana
+  Warning  Unhealthy       45m (x5 over 45m)     kubelet  Readiness probe failed: Get "http://10.42.2.155:3000/api/health": dial tcp 10.42.2.155:3000: connect: connection refused
+  Normal   Pulled          45m (x2 over 46m)     kubelet  Container image "docker.io/grafana/grafana:12.1.0" already present on machine
+  Normal   Created         45m (x2 over 46m)     kubelet  Created container: grafana
+  Warning  BackOff         72s (x218 over 45m)   kubelet  Back-off restarting failed container grafana in pod monitorgrafana-677d8d6465-tktwr_monitoring(70ce476e-785e-4363-a2e4-69a553b0c7b7)

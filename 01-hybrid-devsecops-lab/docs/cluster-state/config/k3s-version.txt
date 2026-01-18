@@ -1,0 +1,3 @@
+Client Version: v1.32.3
+Kustomize Version: v5.5.0
+Server Version: v1.31.6+k3s1

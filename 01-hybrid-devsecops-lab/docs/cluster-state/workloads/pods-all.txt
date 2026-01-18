@@ -1,0 +1,43 @@
+NAMESPACE              NAME                                                     READY   STATUS             RESTARTS            AGE    IP             NODE            NOMINATED NODE   READINESS GATES
+argocd                 argocd-application-controller-0                          1/1     Running            0                   34m    10.42.3.36     debianworker2   <none>           <none>
+argocd                 argocd-applicationset-controller-75c59fc666-bkzbt        1/1     Running            5 (34m ago)         141d   10.42.2.172    debianmaster    <none>           <none>
+argocd                 argocd-dex-server-55bdf84957-lbcgk                       1/1     Running            4 (34m ago)         141d   10.42.2.152    debianmaster    <none>           <none>
+argocd                 argocd-notifications-controller-b9986964f-llxlm          1/1     Running            7 (34m ago)         135d   10.42.2.164    debianmaster    <none>           <none>
+argocd                 argocd-redis-65b9d6c547-xqlsp                            1/1     Running            3 (34m ago)         141d   10.42.2.161    debianmaster    <none>           <none>
+argocd                 argocd-repo-server-95c9d69c6-2vxj4                       1/1     Running            5 (34m ago)         135d   10.42.2.177    debianmaster    <none>           <none>
+argocd                 argocd-server-84477d5958-z5nwc                           0/1     Running            2062 (29s ago)      141d   10.42.2.165    debianmaster    <none>           <none>
+cyclops                cyclops-ctrl-8685b986c7-tmr5r                            1/1     Running            5 (34m ago)         74d    10.42.2.157    debianmaster    <none>           <none>
+cyclops                cyclops-ui-97ffc847c-qz262                               1/1     Running            3 (34m ago)         74d    10.42.2.163    debianmaster    <none>           <none>
+default                hello-world-795988dcf6-gjhr9                             1/1     Running            4 (34m ago)         135d   10.42.2.175    debianmaster    <none>           <none>
+default                nginx-676b6c5bbc-kcg8n                                   1/1     Running            6 (34m ago)         157d   10.42.2.174    debianmaster    <none>           <none>
+kube-system            coredns-ccb96694c-2mrz9                                  1/1     Running            8 (34m ago)         135d   10.42.2.169    debianmaster    <none>           <none>
+kube-system            headlamp-666485dd85-hpxln                                1/1     Running            5 (34m ago)         141d   10.42.2.153    debianmaster    <none>           <none>
+kube-system            kite-7cb79df49c-nth8h                                    1/1     Running            9 (34m ago)         135d   10.42.2.148    debianmaster    <none>           <none>
+kube-system            local-path-provisioner-5b5f758bcf-7hq92                  1/1     Running            4 (34m ago)         135d   10.42.2.170    debianmaster    <none>           <none>
+kube-system            metrics-server-7bf7d58749-v5vbk                          1/1     Running            11 (34m ago)        135d   10.42.2.151    debianmaster    <none>           <none>
+kube-system            svclb-argocd-server-28f86d56-4jt9k                       1/1     Running            4 (34m ago)         141d   10.42.2.154    debianmaster    <none>           <none>
+kube-system            svclb-argocd-server-28f86d56-qr66h                       1/1     Running            1 (<invalid> ago)   74d    10.42.0.7      debianworker1   <none>           <none>
+kube-system            svclb-argocd-server-28f86d56-rgqct                       1/1     Running            2 (34m ago)         141d   10.42.3.38     debianworker2   <none>           <none>
+kube-system            svclb-traefik-cd2bf767-2k6jc                             2/2     Running            14 (34m ago)        309d   10.42.2.162    debianmaster    <none>           <none>
+kube-system            svclb-traefik-cd2bf767-68vkn                             2/2     Running            2 (<invalid> ago)   74d    10.42.0.8      debianworker1   <none>           <none>
+kube-system            svclb-traefik-cd2bf767-7pmqm                             2/2     Running            10 (34m ago)        309d   10.42.3.39     debianworker2   <none>           <none>
+kube-system            traefik-5cbdcf97f4-bbnx7                                 1/1     Running            15 (34m ago)        309d   10.42.2.171    debianmaster    <none>           <none>
+kubernetes-dashboard   dashboard-metrics-scraper-6b96ff7878-4r6ks               1/1     Running            4 (34m ago)         135d   10.42.2.158    debianmaster    <none>           <none>
+kubernetes-dashboard   kubernetes-dashboard-8696f5f494-js7b8                    1/1     Running            8 (34m ago)         135d   10.42.2.166    debianmaster    <none>           <none>
+monitoring             alertmanager-monitorgrafana-kube-promet-alertmanager-0   2/2     Running            11 (34m ago)        144d   10.42.2.149    debianmaster    <none>           <none>
+monitoring             loki-0                                                   1/1     Running            0                   34m    10.42.3.35     debianworker2   <none>           <none>
+monitoring             loki-promtail-5dr6s                                      1/1     Running            6 (34m ago)         144d   10.42.2.167    debianmaster    <none>           <none>
+monitoring             loki-promtail-9g6nk                                      0/1     Running            1 (<invalid> ago)   74d    10.42.0.6      debianworker1   <none>           <none>
+monitoring             loki-promtail-k7tfg                                      1/1     Running            2 (34m ago)         144d   10.42.3.34     debianworker2   <none>           <none>
+monitoring             monitorgrafana-677d8d6465-tktwr                          2/3     CrashLoopBackOff   235 (2m5s ago)      135d   10.42.2.155    debianmaster    <none>           <none>
+monitoring             monitorgrafana-kube-promet-operator-7fffcb5-d4rhz        1/1     Running            11 (34m ago)        135d   10.42.2.150    debianmaster    <none>           <none>
+monitoring             monitorgrafana-kube-state-metrics-995596c59-b56pm        1/1     Running            11 (34m ago)        144d   10.42.2.156    debianmaster    <none>           <none>
+monitoring             monitorgrafana-prometheus-node-exporter-2hhbs            0/1     Running            1 (<invalid> ago)   74d    192.168.0.24   debianworker1   <none>           <none>
+monitoring             monitorgrafana-prometheus-node-exporter-8dgb6            1/1     Running            10 (34m ago)        144d   192.168.0.18   debianmaster    <none>           <none>
+monitoring             monitorgrafana-prometheus-node-exporter-m96w7            1/1     Running            2 (34m ago)         144d   192.168.0.25   debianworker2   <none>           <none>
+monitoring             prometheus-monitorgrafana-kube-promet-prometheus-0       2/2     Running            0                   34m    10.42.3.37     debianworker2   <none>           <none>
+pauhome                web-595c7c58b5-9vs9d                                     1/1     Running            5 (34m ago)         144d   10.42.2.159    debianmaster    <none>           <none>
+pauhome                web-595c7c58b5-mcb6x                                     1/1     Running            4 (34m ago)         135d   10.42.2.173    debianmaster    <none>           <none>
+pauhome                web-595c7c58b5-n4kjr                                     1/1     Running            5 (34m ago)         144d   10.42.2.176    debianmaster    <none>           <none>
+pauhome                web-595c7c58b5-vpjgw                                     1/1     Running            4 (34m ago)         135d   10.42.2.160    debianmaster    <none>           <none>
+pauhome                web-595c7c58b5-zrmcp                                     1/1     Running            4 (34m ago)         135d   10.42.2.168    debianmaster    <none>           <none>

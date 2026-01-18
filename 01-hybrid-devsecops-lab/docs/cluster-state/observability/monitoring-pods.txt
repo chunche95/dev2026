@@ -1,0 +1,13 @@
+NAME                                                     READY   STATUS             RESTARTS            AGE    IP             NODE            NOMINATED NODE   READINESS GATES
+alertmanager-monitorgrafana-kube-promet-alertmanager-0   2/2     Running            11 (34m ago)        144d   10.42.2.149    debianmaster    <none>           <none>
+loki-0                                                   1/1     Running            0                   34m    10.42.3.35     debianworker2   <none>           <none>
+loki-promtail-5dr6s                                      1/1     Running            6 (34m ago)         144d   10.42.2.167    debianmaster    <none>           <none>
+loki-promtail-9g6nk                                      0/1     Running            1 (<invalid> ago)   74d    10.42.0.6      debianworker1   <none>           <none>
+loki-promtail-k7tfg                                      1/1     Running            2 (34m ago)         144d   10.42.3.34     debianworker2   <none>           <none>
+monitorgrafana-677d8d6465-tktwr                          2/3     CrashLoopBackOff   235 (2m7s ago)      135d   10.42.2.155    debianmaster    <none>           <none>
+monitorgrafana-kube-promet-operator-7fffcb5-d4rhz        1/1     Running            11 (34m ago)        135d   10.42.2.150    debianmaster    <none>           <none>
+monitorgrafana-kube-state-metrics-995596c59-b56pm        1/1     Running            11 (34m ago)        144d   10.42.2.156    debianmaster    <none>           <none>
+monitorgrafana-prometheus-node-exporter-2hhbs            0/1     Running            1 (<invalid> ago)   74d    192.168.0.24   debianworker1   <none>           <none>
+monitorgrafana-prometheus-node-exporter-8dgb6            1/1     Running            10 (34m ago)        144d   192.168.0.18   debianmaster    <none>           <none>
+monitorgrafana-prometheus-node-exporter-m96w7            1/1     Running            2 (34m ago)         144d   192.168.0.25   debianworker2   <none>           <none>
+prometheus-monitorgrafana-kube-promet-prometheus-0       2/2     Running            0                   34m    10.42.3.37     debianworker2   <none>           <none>

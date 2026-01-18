@@ -1,0 +1,385 @@
+Name:               debianmaster
+Roles:              control-plane,master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=debianmaster
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node-role.kubernetes.io/master=true
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 192.168.0.18,2a0c:5a82:d202:d500:2ce7:9bed:4110:3228
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"26:61:8c:3e:49:6c"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 192.168.0.18
+                    k3s.io/hostname: debianmaster
+                    k3s.io/internal-ip: 192.168.0.18,2a0c:5a82:d202:d500:2ce7:9bed:4110:3228
+                    k3s.io/node-args: ["server"]
+                    k3s.io/node-config-hash: MLFMUCBMRVINLJJKSG32TOUFWB4CN55GMSNY25AZPESQXZCYRN2A====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sat, 15 Mar 2025 18:48:54 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  debianmaster
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 18 Jan 2026 21:46:02 +0100
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 18 Jan 2026 21:43:08 +0100   Wed, 05 Nov 2025 13:02:02 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 18 Jan 2026 21:43:08 +0100   Wed, 05 Nov 2025 13:02:02 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 18 Jan 2026 21:43:08 +0100   Wed, 05 Nov 2025 13:02:02 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 18 Jan 2026 21:43:08 +0100   Wed, 05 Nov 2025 13:06:32 +0100   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.0.18
+  InternalIP:  2a0c:5a82:d202:d500:2ce7:9bed:4110:3228
+  Hostname:    debianmaster
+Capacity:
+  cpu:                2
+  ephemeral-storage:  39987708Ki
+  hugepages-2Mi:      0
+  memory:             4009144Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  38900042312
+  hugepages-2Mi:      0
+  memory:             4009144Ki
+  pods:               110
+System Info:
+  Machine ID:                 3799dcc654724e85967a5830f70815a1
+  System UUID:                c453c322-88f9-48c7-9eca-edc461366f05
+  Boot ID:                    69a20a1a-cbb0-4e05-ab10-d2f48ce59b2d
+  Kernel Version:             6.1.0-40-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.0.2-k3s2
+  Kubelet Version:            v1.31.6+k3s1
+  Kube-Proxy Version:         v1.31.6+k3s1
+PodCIDR:                      10.42.2.0/24
+PodCIDRs:                     10.42.2.0/24
+ProviderID:                   k3s://debianmaster
+Non-terminated Pods:          (31 in total)
+  Namespace                   Name                                                      CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                      ------------  ----------  ---------------  -------------  ---
+  argocd                      argocd-applicationset-controller-75c59fc666-bkzbt         0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  argocd                      argocd-dex-server-55bdf84957-lbcgk                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  argocd                      argocd-notifications-controller-b9986964f-llxlm           0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  argocd                      argocd-redis-65b9d6c547-xqlsp                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  argocd                      argocd-repo-server-95c9d69c6-2vxj4                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  argocd                      argocd-server-84477d5958-z5nwc                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  cyclops                     cyclops-ctrl-8685b986c7-tmr5r                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+  cyclops                     cyclops-ui-97ffc847c-qz262                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+  default                     hello-world-795988dcf6-gjhr9                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  default                     nginx-676b6c5bbc-kcg8n                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         157d
+  kube-system                 coredns-ccb96694c-2mrz9                                   100m (5%)     0 (0%)      70Mi (1%)        170Mi (4%)     135d
+  kube-system                 headlamp-666485dd85-hpxln                                 0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  kube-system                 kite-7cb79df49c-nth8h                                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  kube-system                 local-path-provisioner-5b5f758bcf-7hq92                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  kube-system                 metrics-server-7bf7d58749-v5vbk                           100m (5%)     0 (0%)      70Mi (1%)        0 (0%)         135d
+  kube-system                 svclb-argocd-server-28f86d56-4jt9k                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  kube-system                 svclb-traefik-cd2bf767-2k6jc                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         309d
+  kube-system                 traefik-5cbdcf97f4-bbnx7                                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         309d
+  kubernetes-dashboard        dashboard-metrics-scraper-6b96ff7878-4r6ks                0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  kubernetes-dashboard        kubernetes-dashboard-8696f5f494-js7b8                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  monitoring                  alertmanager-monitorgrafana-kube-promet-alertmanager-0    0 (0%)        0 (0%)      200Mi (5%)       0 (0%)         144d
+  monitoring                  loki-promtail-5dr6s                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         144d
+  monitoring                  monitorgrafana-677d8d6465-tktwr                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  monitoring                  monitorgrafana-kube-promet-operator-7fffcb5-d4rhz         0 (0%)        0 (0%)      0 (0%)           0 (0%)         135d
+  monitoring                  monitorgrafana-kube-state-metrics-995596c59-b56pm         0 (0%)        0 (0%)      0 (0%)           0 (0%)         144d
+  monitoring                  monitorgrafana-prometheus-node-exporter-8dgb6             0 (0%)        0 (0%)      0 (0%)           0 (0%)         144d
+  pauhome                     web-595c7c58b5-9vs9d                                      100m (5%)     500m (25%)  0 (0%)           0 (0%)         144d
+  pauhome                     web-595c7c58b5-mcb6x                                      100m (5%)     500m (25%)  0 (0%)           0 (0%)         135d
+  pauhome                     web-595c7c58b5-n4kjr                                      100m (5%)     500m (25%)  0 (0%)           0 (0%)         144d
+  pauhome                     web-595c7c58b5-vpjgw                                      100m (5%)     500m (25%)  0 (0%)           0 (0%)         135d
+  pauhome                     web-595c7c58b5-zrmcp                                      100m (5%)     500m (25%)  0 (0%)           0 (0%)         135d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                700m (35%)  2500m (125%)
+  memory             340Mi (8%)  170Mi (4%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:
+  Type     Reason                             Age                From             Message
+  ----     ------                             ----               ----             -------
+  Normal   Starting                           34m                kube-proxy       
+  Normal   NodeNotReady                       74d                node-controller  Node debianmaster status is now: NodeNotReady
+  Normal   NodeHasSufficientPID               74d (x2 over 75d)  kubelet          Node debianmaster status is now: NodeHasSufficientPID
+  Normal   NodeHasNoDiskPressure              74d (x2 over 75d)  kubelet          Node debianmaster status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientMemory            74d (x2 over 75d)  kubelet          Node debianmaster status is now: NodeHasSufficientMemory
+  Normal   NodeNotReady                       74d (x3 over 74d)  kubelet          Node debianmaster status is now: NodeNotReady
+  Warning  ContainerGCFailed                  74d                kubelet          rpc error: code = DeadlineExceeded desc = context deadline exceeded
+  Normal   NodeReady                          74d (x2 over 74d)  kubelet          Node debianmaster status is now: NodeReady
+  Warning  PossibleMemoryBackedVolumesOnDisk  34m                kubelet          The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   Starting                           34m                kubelet          Starting kubelet.
+  Normal   NodeAllocatableEnforced            34m                kubelet          Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory            34m                kubelet          Node debianmaster status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              34m                kubelet          Node debianmaster status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               34m                kubelet          Node debianmaster status is now: NodeHasSufficientPID
+  Warning  Rebooted                           34m                kubelet          Node debianmaster has been rebooted, boot id: 69a20a1a-cbb0-4e05-ab10-d2f48ce59b2d
+  Warning  NodePasswordValidationFailed       34m                k3s-supervisor   Deferred node password secret validation failed: secrets "debianmaster.node-password.k3s" already exists
+  Normal   NodePasswordValidationComplete     34m                k3s-supervisor   Deferred node password secret validation complete
+  Normal   RegisteredNode                     34m                node-controller  Node debianmaster event: Registered Node debianmaster in Controller
+
+
+Name:               debianworker1
+Roles:              worker
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=debianworker1
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/worker=worker
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 192.168.0.24,2a0c:5a82:d202:d500:79a1:805e:f2da:570c
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"06:2e:4e:80:cc:a1"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 192.168.0.24
+                    k3s.io/hostname: debianworker1
+                    k3s.io/internal-ip: 192.168.0.24,2a0c:5a82:d202:d500:79a1:805e:f2da:570c
+                    k3s.io/node-args: ["agent"]
+                    k3s.io/node-config-hash: WYPBL3MBN7IUWZNAM4R7QSHZ5XGY327EACKNUN5WSVWJ5QP3TYSA====
+                    k3s.io/node-env: {"K3S_TOKEN":"********","K3S_URL":"https://192.168.0.18:6443"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 05 Nov 2025 09:55:42 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  debianworker1
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 18 Jan 2026 21:45:59 +0100
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 18 Jan 2026 21:45:59 +0100   Sun, 18 Jan 2026 22:14:07 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 18 Jan 2026 21:45:59 +0100   Sun, 18 Jan 2026 22:14:07 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 18 Jan 2026 21:45:59 +0100   Sun, 18 Jan 2026 22:14:07 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 18 Jan 2026 21:45:59 +0100   Sun, 18 Jan 2026 22:14:07 +0100   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.0.24
+  InternalIP:  2a0c:5a82:d202:d500:79a1:805e:f2da:570c
+  Hostname:    debianworker1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  39987708Ki
+  hugepages-2Mi:      0
+  memory:             4009144Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  38900042312
+  hugepages-2Mi:      0
+  memory:             4009144Ki
+  pods:               110
+System Info:
+  Machine ID:                 3799dcc654724e85967a5830f70815a1
+  System UUID:                64071f47-2643-4c3e-9917-41e2f858f3b6
+  Boot ID:                    cf36ea7a-1e16-4797-a011-c406b7102cff
+  Kernel Version:             6.1.0-40-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.1.4-k3s1
+  Kubelet Version:            v1.33.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.0.0/24
+PodCIDRs:                     10.42.0.0/24
+ProviderID:                   k3s://debianworker1
+Non-terminated Pods:          (4 in total)
+  Namespace                   Name                                             CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                             ------------  ----------  ---------------  -------------  ---
+  kube-system                 svclb-argocd-server-28f86d56-qr66h               0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+  kube-system                 svclb-traefik-cd2bf767-68vkn                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+  monitoring                  loki-promtail-9g6nk                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+  monitoring                  monitorgrafana-prometheus-node-exporter-2hhbs    0 (0%)        0 (0%)      0 (0%)           0 (0%)         74d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests  Limits
+  --------           --------  ------
+  cpu                0 (0%)    0 (0%)
+  memory             0 (0%)    0 (0%)
+  ephemeral-storage  0 (0%)    0 (0%)
+  hugepages-2Mi      0 (0%)    0 (0%)
+Events:
+  Type     Reason                             Age                            From              Message
+  ----     ------                             ----                           ----              -------
+  Normal   Starting                           100s                           kube-proxy        
+  Normal   Starting                           <invalid>                      kube-proxy        
+  Normal   Starting                           16m                            kube-proxy        
+  Normal   Starting                           74d                            kube-proxy        
+  Warning  InvalidDiskCapacity                74d                            kubelet           invalid capacity 0 on image filesystem
+  Normal   CertificateExpirationOK            74d                            k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   NodeAllocatableEnforced            74d                            kubelet           Updated Node Allocatable limit across pods
+  Warning  PossibleMemoryBackedVolumesOnDisk  74d                            kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   Starting                           74d                            kubelet           Starting kubelet.
+  Normal   NodeHasSufficientPID               74d (x2 over 74d)              kubelet           Node debianworker1 status is now: NodeHasSufficientPID
+  Normal   NodeHasSufficientMemory            74d (x3 over 74d)              kubelet           Node debianworker1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              74d (x3 over 74d)              kubelet           Node debianworker1 status is now: NodeHasNoDiskPressure
+  Normal   NodeNotReady                       74d (x2 over 74d)              node-controller   Node debianworker1 status is now: NodeNotReady
+  Normal   RegisteredNode                     34m                            node-controller   Node debianworker1 event: Registered Node debianworker1 in Controller
+  Normal   Starting                           16m                            kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced            16m                            kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory            16m                            kubelet           Node debianworker1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              16m                            kubelet           Node debianworker1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               16m                            kubelet           Node debianworker1 status is now: NodeHasSufficientPID
+  Warning  InvalidDiskCapacity                16m                            kubelet           invalid capacity 0 on image filesystem
+  Warning  PossibleMemoryBackedVolumesOnDisk  16m                            kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   CertificateExpirationOK            16m                            k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   CertificateExpirationOK            101s                           k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Warning  InvalidDiskCapacity                101s                           kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeAllocatableEnforced            101s                           kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory            101s                           kubelet           Node debianworker1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              101s                           kubelet           Node debianworker1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               101s                           kubelet           Node debianworker1 status is now: NodeHasSufficientPID
+  Normal   Starting                           101s                           kubelet           Starting kubelet.
+  Warning  PossibleMemoryBackedVolumesOnDisk  101s                           kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   Starting                           <invalid>                      kubelet           Starting kubelet.
+  Warning  PossibleMemoryBackedVolumesOnDisk  <invalid>                      kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Warning  InvalidDiskCapacity                <invalid>                      kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeAllocatableEnforced            <invalid>                      kubelet           Updated Node Allocatable limit across pods
+  Warning  Rebooted                           <invalid>                      kubelet           Node debianworker1 has been rebooted, boot id: cf36ea7a-1e16-4797-a011-c406b7102cff
+  Normal   NodeHasSufficientMemory            <invalid> (x4 over <invalid>)  kubelet           Node debianworker1 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              <invalid> (x4 over <invalid>)  kubelet           Node debianworker1 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               <invalid> (x4 over <invalid>)  kubelet           Node debianworker1 status is now: NodeHasSufficientPID
+  Normal   NodeNotReady                       <invalid>                      kubelet           Node debianworker1 status is now: NodeNotReady
+  Normal   NodeReady                          <invalid> (x2 over <invalid>)  kubelet           Node debianworker1 status is now: NodeReady
+  Normal   CertificateExpirationOK            <invalid>                      k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+
+
+Name:               debianworker2
+Roles:              worker
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=debianworker2
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/worker=worker
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 192.168.0.25,2a0c:5a82:d202:d500:4356:da2a:1d70:f665
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"2e:13:a2:bf:73:67"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 192.168.0.25
+                    k3s.io/hostname: debianworker2
+                    k3s.io/internal-ip: 192.168.0.25,2a0c:5a82:d202:d500:4356:da2a:1d70:f665
+                    k3s.io/node-args: ["agent"]
+                    k3s.io/node-config-hash: WYPBL3MBN7IUWZNAM4R7QSHZ5XGY327EACKNUN5WSVWJ5QP3TYSA====
+                    k3s.io/node-env: {"K3S_TOKEN":"********","K3S_URL":"https://192.168.0.18:6443"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sat, 15 Mar 2025 18:49:07 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  debianworker2
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 18 Jan 2026 21:46:05 +0100
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 18 Jan 2026 21:46:05 +0100   Sun, 18 Jan 2026 21:12:02 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 18 Jan 2026 21:46:05 +0100   Sun, 18 Jan 2026 21:12:02 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 18 Jan 2026 21:46:05 +0100   Sun, 18 Jan 2026 21:12:02 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 18 Jan 2026 21:46:05 +0100   Sun, 18 Jan 2026 21:12:02 +0100   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.0.25
+  InternalIP:  2a0c:5a82:d202:d500:4356:da2a:1d70:f665
+  Hostname:    debianworker2
+Capacity:
+  cpu:                2
+  ephemeral-storage:  39987708Ki
+  hugepages-2Mi:      0
+  memory:             4009156Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  38900042312
+  hugepages-2Mi:      0
+  memory:             4009156Ki
+  pods:               110
+System Info:
+  Machine ID:                 3799dcc654724e85967a5830f70815a1
+  System UUID:                4332a516-3b5a-443c-99dc-91e3f996a43f
+  Boot ID:                    a52a5dff-45f3-4c48-b9bc-c00331f87503
+  Kernel Version:             6.1.0-40-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.1.4-k3s1
+  Kubelet Version:            v1.33.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.3.0/24
+PodCIDRs:                     10.42.3.0/24
+ProviderID:                   k3s://debianworker2
+Non-terminated Pods:          (7 in total)
+  Namespace                   Name                                                  CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                  ------------  ----------  ---------------  -------------  ---
+  argocd                      argocd-application-controller-0                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         34m
+  kube-system                 svclb-argocd-server-28f86d56-rgqct                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         141d
+  kube-system                 svclb-traefik-cd2bf767-7pmqm                          0 (0%)        0 (0%)      0 (0%)           0 (0%)         309d
+  monitoring                  loki-0                                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         34m
+  monitoring                  loki-promtail-k7tfg                                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         144d
+  monitoring                  monitorgrafana-prometheus-node-exporter-m96w7         0 (0%)        0 (0%)      0 (0%)           0 (0%)         144d
+  monitoring                  prometheus-monitorgrafana-kube-promet-prometheus-0    0 (0%)        0 (0%)      0 (0%)           0 (0%)         34m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests  Limits
+  --------           --------  ------
+  cpu                0 (0%)    0 (0%)
+  memory             0 (0%)    0 (0%)
+  ephemeral-storage  0 (0%)    0 (0%)
+  hugepages-2Mi      0 (0%)    0 (0%)
+Events:
+  Type     Reason                             Age                From              Message
+  ----     ------                             ----               ----              -------
+  Normal   Starting                           74d                kube-proxy        
+  Normal   Starting                           34m                kube-proxy        
+  Normal   Starting                           18m                kube-proxy        
+  Normal   Starting                           3m47s              kube-proxy        
+  Normal   Starting                           74d                kubelet           Starting kubelet.
+  Normal   NodeHasSufficientMemory            74d (x2 over 74d)  kubelet           Node debianworker2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              74d (x2 over 74d)  kubelet           Node debianworker2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               74d (x2 over 74d)  kubelet           Node debianworker2 status is now: NodeHasSufficientPID
+  Normal   NodeAllocatableEnforced            74d                kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity                74d                kubelet           invalid capacity 0 on image filesystem
+  Warning  PossibleMemoryBackedVolumesOnDisk  74d                kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   CertificateExpirationOK            74d                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   RegisteredNode                     34m                node-controller   Node debianworker2 event: Registered Node debianworker2 in Controller
+  Warning  Rebooted                           34m                kubelet           Node debianworker2 has been rebooted, boot id: a52a5dff-45f3-4c48-b9bc-c00331f87503
+  Warning  PossibleMemoryBackedVolumesOnDisk  34m                kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   CertificateExpirationOK            34m                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal   Starting                           34m                kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced            34m                kubelet           Updated Node Allocatable limit across pods
+  Warning  InvalidDiskCapacity                34m                kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeNotReady                       34m                kubelet           Node debianworker2 status is now: NodeNotReady
+  Normal   NodeReady                          34m                kubelet           Node debianworker2 status is now: NodeReady
+  Normal   NodeHasSufficientPID               34m (x4 over 34m)  kubelet           Node debianworker2 status is now: NodeHasSufficientPID
+  Normal   NodeHasSufficientMemory            34m (x4 over 34m)  kubelet           Node debianworker2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              34m (x4 over 34m)  kubelet           Node debianworker2 status is now: NodeHasNoDiskPressure
+  Normal   CertificateExpirationOK            18m                k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Warning  PossibleMemoryBackedVolumesOnDisk  18m                kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   Starting                           18m                kubelet           Starting kubelet.
+  Warning  InvalidDiskCapacity                18m                kubelet           invalid capacity 0 on image filesystem
+  Normal   NodeAllocatableEnforced            18m                kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientPID               18m                kubelet           Node debianworker2 status is now: NodeHasSufficientPID
+  Normal   NodeHasNoDiskPressure              18m                kubelet           Node debianworker2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientMemory            18m                kubelet           Node debianworker2 status is now: NodeHasSufficientMemory
+  Normal   CertificateExpirationOK            3m48s              k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Warning  PossibleMemoryBackedVolumesOnDisk  3m48s              kubelet           The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+  Normal   Starting                           3m48s              kubelet           Starting kubelet.
+  Normal   NodeAllocatableEnforced            3m48s              kubelet           Updated Node Allocatable limit across pods
+  Normal   NodeHasSufficientMemory            3m48s              kubelet           Node debianworker2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure              3m48s              kubelet           Node debianworker2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID               3m48s              kubelet           Node debianworker2 status is now: NodeHasSufficientPID

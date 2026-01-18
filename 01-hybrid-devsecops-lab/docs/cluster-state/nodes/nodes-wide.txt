@@ -1,0 +1,4 @@
+NAME            STATUS   ROLES                  AGE    VERSION        INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION   CONTAINER-RUNTIME
+debianmaster    Ready    control-plane,master   309d   v1.31.6+k3s1   192.168.0.18   <none>        Debian GNU/Linux 12 (bookworm)   6.1.0-40-amd64   containerd://2.0.2-k3s2
+debianworker1   Ready    worker                 74d    v1.33.5+k3s1   192.168.0.24   <none>        Debian GNU/Linux 12 (bookworm)   6.1.0-40-amd64   containerd://2.1.4-k3s1
+debianworker2   Ready    worker                 309d   v1.33.5+k3s1   192.168.0.25   <none>        Debian GNU/Linux 12 (bookworm)   6.1.0-40-amd64   containerd://2.1.4-k3s1

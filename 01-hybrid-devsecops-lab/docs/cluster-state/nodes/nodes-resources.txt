@@ -1,0 +1,4 @@
+NAME            CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+debianmaster    244m         12%      2727Mi          69%         
+debianworker1   14m          0%       1750Mi          44%         
+debianworker2   43m          2%       1493Mi          38%         

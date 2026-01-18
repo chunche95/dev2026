@@ -1,0 +1,155 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-08-30T14:47:48Z"
+    labels:
+      kubernetes.io/metadata.name: argocd
+    name: argocd
+    resourceVersion: "498476"
+    uid: 48f0c40a-ebb8-40df-802f-e8f1bc3da327
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"cyclops"}}
+    creationTimestamp: "2025-11-05T07:58:52Z"
+    labels:
+      kubernetes.io/metadata.name: cyclops
+    name: cyclops
+    resourceVersion: "743859"
+    uid: ee1ff76d-3c93-4337-a835-be128baa7f1f
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-03-15T16:07:17Z"
+    labels:
+      kubernetes.io/metadata.name: default
+    name: default
+    resourceVersion: "48"
+    uid: 135e7f4c-7dc4-4339-b384-971e72b72034
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-08-30T14:56:08Z"
+    labels:
+      kubernetes.io/metadata.name: headlamp
+    name: headlamp
+    resourceVersion: "499280"
+    uid: fe4eb974-1309-4ba9-bb4e-5875c14c3fb9
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-03-15T16:07:17Z"
+    labels:
+      kubernetes.io/metadata.name: kube-node-lease
+    name: kube-node-lease
+    resourceVersion: "56"
+    uid: c0c77865-9c47-48b8-b83c-b21114702f11
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-03-15T16:07:17Z"
+    labels:
+      kubernetes.io/metadata.name: kube-public
+    name: kube-public
+    resourceVersion: "41"
+    uid: 65dc7090-b12d-48ac-a5e1-7502bc48c387
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-03-15T16:07:17Z"
+    labels:
+      kubernetes.io/metadata.name: kube-system
+    name: kube-system
+    resourceVersion: "11"
+    uid: 00b605c7-bde8-43b6-9f65-0de0150e6187
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"kubernetes-dashboard"}}
+    creationTimestamp: "2025-08-15T00:26:07Z"
+    labels:
+      kubernetes.io/metadata.name: kubernetes-dashboard
+    name: kubernetes-dashboard
+    resourceVersion: "87384"
+    uid: cf50bd00-8314-409c-853c-62b49860f601
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2025-03-16T19:54:20Z"
+    labels:
+      kubernetes.io/metadata.name: monitoring
+      name: monitoring
+    name: monitoring
+    resourceVersion: "50360"
+    uid: 9c54f531-bc63-4e0b-b05e-602ab2869187
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"pauhome"}}
+    creationTimestamp: "2025-03-16T19:52:09Z"
+    labels:
+      kubernetes.io/metadata.name: pauhome
+    name: pauhome
+    resourceVersion: "251737"
+    uid: 3fa128e0-bb4f-4be5-b75c-f7225e236111
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+kind: List
+metadata:
+  resourceVersion: ""

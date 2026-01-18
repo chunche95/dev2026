@@ -1,0 +1,77 @@
+kubectl logs -n monitoring monitorgrafana-677d8d6465-tktwr --all-containers --tail=100
+{"time": "2026-01-18T20:11:55.240220+00:00", "level": "INFO", "msg": "Starting collector"}
+{"time": "2026-01-18T20:11:55.286518+00:00", "level": "WARNING", "msg": "No folder annotation was provided, defaulting to k8s-sidecar-target-directory"}
+{"time": "2026-01-18T20:11:55.356564+00:00", "level": "INFO", "msg": "Loading incluster config ..."}
+{"time": "2026-01-18T20:11:55.397061+00:00", "level": "INFO", "msg": "Config for cluster api at 'https://10.43.0.1:443' loaded..."}
+{"time": "2026-01-18T20:11:55.397274+00:00", "level": "INFO", "msg": "Unique filenames will not be enforced."}
+{"time": "2026-01-18T20:11:55.397397+00:00", "level": "INFO", "msg": "5xx response content will not be enabled."}
+logger=settings t=2026-01-18T20:54:26.259955366Z level=info msg="Starting Grafana" version=12.1.0 commit=ccd7b6ce7ea6184b8c7eb1de044174147dd9a648 branch=HEAD compiled=2026-01-18T20:54:26Z
+logger=settings t=2026-01-18T20:54:26.260657581Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+logger=settings t=2026-01-18T20:54:26.260725016Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+logger=settings t=2026-01-18T20:54:26.260754403Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana/"
+logger=settings t=2026-01-18T20:54:26.260780581Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
+logger=settings t=2026-01-18T20:54:26.26083489Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
+logger=settings t=2026-01-18T20:54:26.260862289Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
+logger=settings t=2026-01-18T20:54:26.260883874Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
+logger=settings t=2026-01-18T20:54:26.260916252Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana/"
+logger=settings t=2026-01-18T20:54:26.260949179Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
+logger=settings t=2026-01-18T20:54:26.260974984Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+logger=settings t=2026-01-18T20:54:26.260996082Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+logger=settings t=2026-01-18T20:54:26.261030342Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_USER=admin"
+logger=settings t=2026-01-18T20:54:26.261063119Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_PASSWORD=*********"
+logger=settings t=2026-01-18T20:54:26.261086013Z level=info msg=Target target=[all]
+logger=settings t=2026-01-18T20:54:26.261116587Z level=info msg="Path Home" path=/usr/share/grafana
+logger=settings t=2026-01-18T20:54:26.261158646Z level=info msg="Path Data" path=/var/lib/grafana/
+logger=settings t=2026-01-18T20:54:26.261187684Z level=info msg="Path Logs" path=/var/log/grafana
+logger=settings t=2026-01-18T20:54:26.261221217Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
+logger=settings t=2026-01-18T20:54:26.261249832Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+logger=settings t=2026-01-18T20:54:26.261293221Z level=info msg="App mode production"
+logger=featuremgmt t=2026-01-18T20:54:26.263238213Z level=info msg=FeatureToggles alertingBulkActionsInUI=true alertingMigrationUI=true unifiedStorageSearchPermissionFiltering=true alertingRulePermanentlyDelete=true pluginsDetailsRightPanel=true kubernetesClientDashboardsFolders=true dashboardSceneForViewers=true addFieldFromCalculationStatFunctions=true alertingNotificationsStepMode=true teamHttpHeadersMimir=true newFiltersUI=true annotationPermissionUpdate=true cloudWatchRoundUpEndTime=true logsExploreTableVisualisation=true onPremToCloudMigrations=true useSessionStorageForRedirection=true ssoSettingsLDAP=true groupToNestedTableTransformation=true lokiLabelNamesQueryApi=true dataplaneFrontendFallback=true lokiQuerySplitting=true logRowsPopoverMenu=true formatString=true logsPanelControls=true tabularNumbers=true logsInfiniteScrolling=true skipTokenRotationIfRecent=true nestedFolders=true influxdbBackendMigration=true grafanaconThemes=true preinstallAutoUpdate=true azureMonitorEnableUserAuth=true ssoSettingsSAML=true prometheusAzureOverrideAudience=true promQLScope=true publicDashboardsScene=true improvedExternalSessionHandling=true alertingImportYAMLUI=true awsAsyncQueryCaching=true alertRuleRestore=true unifiedStorageHistoryPruner=true unifiedRequestLog=true dashboardScene=true dashgpt=true correlations=true panelMonitoring=true transformationsRedesign=true improvedExternalSessionHandlingSAML=true logsContextDatasourceUi=true alertingQueryAndExpressionsStepMode=true tlsMemcached=true recordedQueriesMulti=true alertingRuleVersionHistoryRestore=true cloudWatchNewLabelParsing=true alertingUIOptimizeReducer=true jaegerBackendMigration=true externalCorePlugins=true azureMonitorPrometheusExemplars=true dashboardSceneSolo=true pinNavItems=true alertingRuleRecoverDeleted=true cloudWatchCrossAccountQuerying=true newDashboardSharingComponent=true newPDFRendering=true
+logger=sqlstore t=2026-01-18T20:54:26.263440773Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2026-01-18T20:54:26.274434162Z level=info msg="Locking database"
+logger=migrator t=2026-01-18T20:54:26.274535045Z level=info msg="Starting DB migrations"
+logger=migrator t=2026-01-18T20:54:26.297934039Z level=info msg="migrations completed" performed=0 skipped=665 duration=899.478µs
+logger=migrator t=2026-01-18T20:54:26.298581202Z level=info msg="Unlocking database"
+logger=secrets t=2026-01-18T20:54:26.299116274Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.angulardetectorsprovider.dynamic t=2026-01-18T20:54:26.403271553Z level=info msg="Restored cache from database" duration=782.897µs
+logger=entity-db t=2026-01-18T20:54:26.405027832Z level=info msg="Using database section" db_type=sqlite3
+logger=entity-db t=2026-01-18T20:54:26.405139797Z level=info msg="Initializing Resource DB" db_type=sqlite3 open_conn=0 in_use_conn=0 idle_conn=0 max_open_conn=0
+logger=resource-migrator t=2026-01-18T20:54:26.412625891Z level=info msg="Locking database"
+logger=resource-migrator t=2026-01-18T20:54:26.412699004Z level=info msg="Starting DB migrations"
+logger=resource-migrator t=2026-01-18T20:54:26.420882507Z level=info msg="migrations completed" performed=0 skipped=26 duration=43.774µs
+logger=resource-migrator t=2026-01-18T20:54:26.421425849Z level=info msg="Unlocking database"
+t=2026-01-18T20:54:26.42180099Z level=info caller=logger.go:214 time=2026-01-18T20:54:26.421757361Z msg="Using channel notifier" logger=sql-resource-server
+logger=plugin.store t=2026-01-18T20:54:26.423114491Z level=info msg="Loading plugins..."
+logger=plugins.registration t=2026-01-18T20:54:26.480049294Z level=error msg="Could not register plugin" pluginId=table error="plugin table is already registered"
+logger=plugins.initialization t=2026-01-18T20:54:26.480213555Z level=error msg="Could not initialize plugin" pluginId=table error="plugin table is already registered"
+logger=plugins.registration t=2026-01-18T20:54:26.561803357Z level=info msg="Plugin registered" pluginId=grafana-exploretraces-app
+logger=plugins.registration t=2026-01-18T20:54:26.67321291Z level=info msg="Plugin registered" pluginId=grafana-lokiexplore-app
+logger=plugins.registration t=2026-01-18T20:54:26.73715614Z level=info msg="Plugin registered" pluginId=grafana-metricsdrilldown-app
+logger=plugins.registration t=2026-01-18T20:54:26.796710699Z level=info msg="Plugin registered" pluginId=grafana-pyroscope-app
+logger=plugin.store t=2026-01-18T20:54:26.796866306Z level=info msg="Plugins loaded" count=57 duration=373.752543ms
+logger=query_data t=2026-01-18T20:54:26.804950316Z level=info msg="Query Service initialization"
+logger=live.push_http t=2026-01-18T20:54:26.809595212Z level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier component=alertmanager orgID=1 t=2026-01-18T20:54:26.812907423Z level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.writer t=2026-01-18T20:54:26.820574612Z level=info msg="Setting up remote write using data sources" timeout=10s default_datasource_uid=
+logger=ngalert t=2026-01-18T20:54:26.820786671Z level=info msg="Using simple database alert instance store"
+logger=ngalert.state.manager.persist t=2026-01-18T20:54:26.820880042Z level=info msg="Using sync state persister"
+logger=infra.usagestats.collector t=2026-01-18T20:54:26.823869858Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=grafanaStorageLogger t=2026-01-18T20:54:26.824301819Z level=info msg="Storage starting"
+logger=http.server t=2026-01-18T20:54:26.826380325Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2026-01-18T20:54:26.826535057Z level=info msg="Warming state cache for startup"
+logger=ngalert.state.manager t=2026-01-18T20:54:26.828003984Z level=info msg="State cache has been initialized" states=0 duration=1.466633ms
+logger=provisioning t=2026-01-18T20:54:26.838474284Z level=error msg="Failed to provision data sources" error="Datasource provisioning error: datasource.yaml config is invalid. Only one datasource per organization can be marked as default"
+logger=provisioning t=2026-01-18T20:54:26.844550712Z level=error msg="Failed to provision data sources" error="Datasource provisioning error: datasource.yaml config is invalid. Only one datasource per organization can be marked as default"
+logger=server t=2026-01-18T20:54:26.8446218Z level=error msg="Stopped background service" service=*provisioning.ProvisioningServiceImpl reason="Datasource provisioning error: datasource.yaml config is invalid. Only one datasource per organization can be marked as default"
+logger=ngalert.multiorg.alertmanager t=2026-01-18T20:54:26.844729259Z level=info msg="Starting MultiOrg Alertmanager"
+logger=ngalert.scheduler t=2026-01-18T20:54:26.845282791Z level=info msg="Starting scheduler" tickInterval=10s maxAttempts=3
+logger=ticker t=2026-01-18T20:54:26.845380965Z level=info msg=starting first_tick=2026-01-18T20:54:30Z
+logger=tracing t=2026-01-18T20:54:26.845585218Z level=info msg="Closing tracing"
+logger=plugin.signature.key_retriever t=2026-01-18T20:54:26.845641926Z level=error msg="Error downloading plugin manifest keys" error="Get \"https://grafana.com/api/plugins/ci/keys\": *provisioning.ProvisioningServiceImpl run error: Datasource provisioning error: datasource.yaml config is invalid. Only one datasource per organization can be marked as default"
+Error: ✗ *provisioning.ProvisioningServiceImpl run error: Datasource provisioning error: datasource.yaml config is invalid. Only one datasource per organization can be marked as default
+{"time": "2026-01-18T20:11:55.234725+00:00", "level": "INFO", "msg": "Starting collector"}
+{"time": "2026-01-18T20:11:55.285943+00:00", "level": "WARNING", "msg": "No folder annotation was provided, defaulting to k8s-sidecar-target-directory"}
+{"time": "2026-01-18T20:11:55.355879+00:00", "level": "INFO", "msg": "Loading incluster config ..."}
+{"time": "2026-01-18T20:11:55.398527+00:00", "level": "INFO", "msg": "Config for cluster api at 'https://10.43.0.1:443' loaded..."}
+{"time": "2026-01-18T20:11:55.398733+00:00", "level": "INFO", "msg": "Unique filenames will not be enforced."}
+{"time": "2026-01-18T20:11:55.398889+00:00", "level": "INFO", "msg": "5xx response content will not be enabled."}

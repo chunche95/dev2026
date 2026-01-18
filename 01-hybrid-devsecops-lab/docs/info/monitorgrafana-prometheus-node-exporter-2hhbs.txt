@@ -1,0 +1,51 @@
+kubectl logs -n monitoring monitorgrafana-prometheus-node-exporter-2hhbs --tail=50
+time=2026-01-18T21:14:10.010Z level=INFO source=filesystem_common.go:294 msg="Parsed flag --collector.filesystem.fs-types-exclude" collector=filesystem flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs|erofs)$
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:135 msg="Enabled collectors"
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=arp
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=bcache
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=bonding
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=btrfs
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=conntrack
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=cpu
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=cpufreq
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=diskstats
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=dmi
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=edac
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=entropy
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=fibrechannel
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=filefd
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=filesystem
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=hwmon
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=infiniband
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=ipvs
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=loadavg
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=mdadm
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=meminfo
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=netclass
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=netdev
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=netstat
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=nfs
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=nfsd
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=nvme
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=os
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=powersupplyclass
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=pressure
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=rapl
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=schedstat
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=selinux
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=sockstat
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=softnet
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=stat
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=tapestats
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=textfile
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=thermal_zone
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=time
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=timex
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=udp_queues
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=uname
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=vmstat
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=watchdog
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=xfs
+time=2026-01-18T21:14:10.010Z level=INFO source=node_exporter.go:141 msg=zfs
+time=2026-01-18T21:14:10.014Z level=INFO source=tls_config.go:347 msg="Listening on" address=[::]:9100
+time=2026-01-18T21:14:10.014Z level=INFO source=tls_config.go:350 msg="TLS is disabled." http2=false address=[::]:9100

@@ -1,0 +1,11 @@
+NAME                   STATUS   AGE
+argocd                 Active   141d
+cyclops                Active   74d
+default                Active   309d
+headlamp               Active   141d
+kube-node-lease        Active   309d
+kube-public            Active   309d
+kube-system            Active   309d
+kubernetes-dashboard   Active   156d
+monitoring             Active   308d
+pauhome                Active   308d

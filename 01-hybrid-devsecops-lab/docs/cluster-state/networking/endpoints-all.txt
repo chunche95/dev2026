@@ -1,0 +1,40 @@
+NAMESPACE              NAME                                                 ENDPOINTS                                                              AGE
+argocd                 argocd-applicationset-controller                     10.42.2.172:8888,10.42.2.172:7000                                      141d
+argocd                 argocd-dex-server                                    10.42.2.152:5558,10.42.2.152:5557,10.42.2.152:5556                     141d
+argocd                 argocd-metrics                                       10.42.3.36:8082                                                        141d
+argocd                 argocd-notifications-controller-metrics              10.42.2.164:9001                                                       141d
+argocd                 argocd-redis                                         10.42.2.161:6379                                                       141d
+argocd                 argocd-repo-server                                   10.42.2.177:8084,10.42.2.177:8081                                      141d
+argocd                 argocd-server                                                                                                               141d
+argocd                 argocd-server-metrics                                                                                                       141d
+cyclops                cyclops-ctrl                                         10.42.2.157:8080                                                       74d
+cyclops                cyclops-ui                                           10.42.2.163:80                                                         74d
+default                hello-world                                          10.42.2.175:8080                                                       156d
+default                kubernetes                                           192.168.0.18:6443                                                      309d
+default                nginx-service                                        10.42.2.174:80                                                         157d
+kube-system            headlamp                                             10.42.2.153:4466                                                       141d
+kube-system            kite                                                 10.42.2.148:8080                                                       144d
+kube-system            kite-service                                         10.42.2.148:8080                                                       144d
+kube-system            kube-dns                                             10.42.2.169:53,10.42.2.169:53,10.42.2.169:9153                         309d
+kube-system            metrics-server                                       10.42.2.151:10250                                                      309d
+kube-system            monitorgrafana-kube-promet-coredns                   10.42.2.169:9153                                                       144d
+kube-system            monitorgrafana-kube-promet-kube-controller-manager   <none>                                                                 144d
+kube-system            monitorgrafana-kube-promet-kube-etcd                 <none>                                                                 144d
+kube-system            monitorgrafana-kube-promet-kube-proxy                <none>                                                                 144d
+kube-system            monitorgrafana-kube-promet-kube-scheduler            <none>                                                                 144d
+kube-system            monitorgrafana-kube-promet-kubelet                   192.168.0.18:10250,192.168.0.24:10250,192.168.0.25:10250 + 6 more...   308d
+kube-system            traefik                                              10.42.2.171:8000,10.42.2.171:8443                                      309d
+kubernetes-dashboard   dashboard-metrics-scraper                            10.42.2.158:8000                                                       156d
+kubernetes-dashboard   kubernetes-dashboard                                 10.42.2.166:8443                                                       156d
+monitoring             alertmanager-operated                                10.42.2.149:9094,10.42.2.149:9094,10.42.2.149:9093                     144d
+monitoring             loki                                                 10.42.3.35:3100                                                        144d
+monitoring             loki-headless                                        10.42.3.35:3100                                                        144d
+monitoring             loki-memberlist                                      10.42.3.35:7946                                                        144d
+monitoring             monitorgrafana                                                                                                              144d
+monitoring             monitorgrafana-kube-promet-alertmanager              10.42.2.149:8080,10.42.2.149:9093                                      144d
+monitoring             monitorgrafana-kube-promet-operator                  10.42.2.150:10250                                                      144d
+monitoring             monitorgrafana-kube-promet-prometheus                10.42.3.37:9090,10.42.3.37:8080                                        144d
+monitoring             monitorgrafana-kube-state-metrics                    10.42.2.156:8080                                                       144d
+monitoring             monitorgrafana-prometheus-node-exporter              192.168.0.18:9100,192.168.0.25:9100                                    144d
+monitoring             prometheus-operated                                  10.42.3.37:9090                                                        144d
+pauhome                web                                                  10.42.2.159:80,10.42.2.160:80,10.42.2.168:80 + 2 more...               144d
